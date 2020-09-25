@@ -1,0 +1,8 @@
+
+*.~pas
+*.dcu
+*.~ddp
+*.~dfm
+*.~dpr
+*.~dsk
+sources/IEBrowser.skincfg
