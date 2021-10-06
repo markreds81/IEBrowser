@@ -7,7 +7,8 @@ uses
   FUHidden in 'FUHidden.pas' {FHidden},
   WinUtils in 'WinUtils.pas',
   FUAbout in 'FUAbout.pas' {FAbout},
-  DefaultsDb in 'DefaultsDb.pas';
+  DefaultsDb in 'DefaultsDb.pas',
+  FUInfo in 'FUInfo.pas' {FInfo};
 
 {$R *.res}
 
@@ -20,6 +21,7 @@ begin
   Application.CreateForm(TFHidden, FHidden);
   Application.CreateForm(TFMain, FMain);
   Application.CreateForm(TFAbout, FAbout);
+  Application.CreateForm(TFInfo, FInfo);
   Application.ShowMainForm:= False;
   Application.Run;
 end.

@@ -27,11 +27,13 @@ var
 implementation
 
 uses
-  FUMain, FUAbout;
+  FUMain, FUAbout, FUInfo, ShellApi;
 
 const
   ID_MENU_MAIN = Word(-100);
-  ID_MENU_ABOUT = Word(-101);
+  ID_MENU_SHOW_INFO = Word(-101);
+  ID_MENU_INTERNET_OPTIONS = Word(-102);
+  ID_MENU_ABOUT = Word(-110);
 
 {$R *.dfm}
 
@@ -53,8 +55,17 @@ end;
 procedure TFBrowser.WMSysCommand(var AMessage: TMessage);
 begin
   case AMessage.WParam of
-    ID_MENU_MAIN: FMain.Show;
-    ID_MENU_ABOUT: FAbout.ShowModal;
+    ID_MENU_MAIN:
+      FMain.Show;
+    ID_MENU_SHOW_INFO:
+      begin
+        FInfo.Url:= WebBrowser.LocationURL;
+        FInfo.ShowModal;
+      end;
+    ID_MENU_INTERNET_OPTIONS:
+      ShellExecute(Handle, nil, PChar('inetcpl.cpl'), nil, nil, SW_SHOWNORMAL);
+    ID_MENU_ABOUT:
+      FAbout.ShowModal;
   end;
 
   inherited;
@@ -67,13 +78,15 @@ begin
   SysMenu:= GetSystemMenu(Handle, False);
   AppendMenu(SysMenu, MF_SEPARATOR, Word(-1), '');
   AppendMenu(SysMenu, MF_BYPOSITION, ID_MENU_MAIN, 'New Session');
+  AppendMenu(SysMenu, MF_BYPOSITION, ID_MENU_SHOW_INFO, 'Show info');
+  AppendMenu(SysMenu, MF_BYPOSITION, ID_MENU_INTERNET_OPTIONS, 'Internet Options');
   AppendMenu(SysMenu, MF_SEPARATOR, Word(-1), '');
   AppendMenu(SysMenu, MF_BYPOSITION, ID_MENU_ABOUT, 'About IEBrowser');
 end;
 
 function TFBrowser.GetUrl: String;
 begin
-  Result:= WebBrowser.Path;
+  Result:= WebBrowser.LocationURL;
 end;
 
 procedure TFBrowser.SetUrl(AUrl: String);

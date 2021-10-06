@@ -38,6 +38,10 @@ type
     procedure LoadButtonClick(Sender: TObject);
     procedure SessionListDblClick(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure HostnameFieldKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure PortFieldKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
   private
     procedure OpenBrowser(const ACaption: string = '');
   protected
@@ -253,6 +257,20 @@ var
 begin
   for I:= 0 to SessionList.Count - 1 do
     SessionList.Items.Objects[I].Free;
+end;
+
+procedure TFMain.HostnameFieldKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_RETURN then
+    OpenBrowser;
+end;
+
+procedure TFMain.PortFieldKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_RETURN then
+    OpenBrowser;
 end;
 
 end.

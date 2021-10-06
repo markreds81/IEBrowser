@@ -66,7 +66,8 @@ object FMain: TFMain
           Top = 40
           Width = 169
           Height = 21
-          TabOrder = 0
+          TabOrder = 1
+          OnKeyDown = HostnameFieldKeyDown
         end
         object ProtocolField: TComboBox
           Left = 16
@@ -76,7 +77,7 @@ object FMain: TFMain
           Style = csDropDownList
           ItemHeight = 13
           ItemIndex = 0
-          TabOrder = 1
+          TabOrder = 0
           Text = 'HTTP'
           Items.Strings = (
             'HTTP'
@@ -91,7 +92,7 @@ object FMain: TFMain
           Min = -32767
           Max = 32767
           Position = 80
-          TabOrder = 2
+          TabOrder = 3
           Thousands = False
         end
         object PortField: TEdit
@@ -99,8 +100,9 @@ object FMain: TFMain
           Top = 40
           Width = 41
           Height = 21
-          TabOrder = 3
+          TabOrder = 2
           Text = '80'
+          OnKeyDown = PortFieldKeyDown
         end
       end
       object GroupBox2: TGroupBox
@@ -116,7 +118,7 @@ object FMain: TFMain
           Width = 225
           Height = 113
           ItemHeight = 13
-          TabOrder = 0
+          TabOrder = 1
           OnDblClick = SessionListDblClick
         end
         object NameField: TEdit
@@ -124,7 +126,7 @@ object FMain: TFMain
           Top = 24
           Width = 225
           Height = 21
-          TabOrder = 1
+          TabOrder = 0
         end
         object LoadButton: TButton
           Left = 256

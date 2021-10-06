@@ -4,8 +4,8 @@ object FAbout: TFAbout
   BorderStyle = bsDialog
   BorderWidth = 2
   Caption = 'About IEBrowser'
-  ClientHeight = 282
-  ClientWidth = 342
+  ClientHeight = 266
+  ClientWidth = 365
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -183,11 +183,11 @@ object FAbout: TFAbout
   object Label2: TLabel
     Left = 8
     Top = 48
-    Width = 323
+    Width = 353
     Height = 13
     Caption = 
-      'Copyright (C) 2020 Marco Rossi (aka Mark Reds). All rights reser' +
-      'ved.'
+      'Copyright (C) 2020, 2021 Marco Rossi (aka Mark Reds). All rights' +
+      ' reserved.'
   end
   object Label3: TLabel
     Left = 8
@@ -236,8 +236,8 @@ object FAbout: TFAbout
   object Label7: TLabel
     Left = 8
     Top = 88
-    Width = 321
-    Height = 185
+    Width = 353
+    Height = 169
     AutoSize = False
     Caption = 
       'This software is free software; you can redistribute it and/or m' +
