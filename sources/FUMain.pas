@@ -142,18 +142,24 @@ begin
       Dict.Free;
       SessionList.Items.Delete(Index);
     end;
-    FileName:= IncludeTrailingPathDelimiter(GetDataFolder) + FOLDER_SAVED + PathDelim + NameField.Text + '.txt';
-    Dict:= TStringList.Create;
-    Dict.Values['Name']:= NameField.Text;
-    Dict.Values['Protocol']:= ProtocolField.Text;
-    Dict.Values['Hostname']:= HostnameField.Text;
-    Dict.Values['Port']:= PortField.Text;
-    try
-      Dict.SaveToFile(FileName);
-    except
-      on E: Exception do MessageDlg(E.Message, mtError, [mbOk], E.HelpContext);
+    FileName:= IncludeTrailingPathDelimiter(GetDataFolder) + FOLDER_SAVED;
+    if not ForceDirectories(FileName) then
+      MessageDlg('Cannot create folder: ' + FileName, mtError, [mbOk], 0)
+    else
+    begin
+      FileName:= FileName + PathDelim + NameField.Text + '.txt';
+      Dict:= TStringList.Create;
+      Dict.Values['Name']:= NameField.Text;
+      Dict.Values['Protocol']:= ProtocolField.Text;
+      Dict.Values['Hostname']:= HostnameField.Text;
+      Dict.Values['Port']:= PortField.Text;
+      try
+        Dict.SaveToFile(FileName);
+      except
+        on E: Exception do MessageDlg(E.Message, mtError, [mbOk], E.HelpContext);
+      end;
+      SessionList.AddItem(Dict.Values['Name'], Dict);
     end;
-    SessionList.AddItem(Dict.Values['Name'], Dict);
   end
 end;
 
