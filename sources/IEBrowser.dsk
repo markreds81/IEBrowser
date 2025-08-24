@@ -1,14 +1,14 @@
 [Closed Files]
-File_0=SourceModule,'c:\programmi\borland\delphi7\source\rtl\Sys\sysutils.pas',0,1,4983,1,5001,0,0
-File_1=SourceModule,'c:\programmi\borland\delphi7\source\Internet\SHDocVw.pas',0,1,1058,30,1095,0,0
-File_2=SourceModule,'c:\programmi\borland\delphi7\source\vcl\OleCtrls.pas',0,1,145,1,110,0,0
-File_3=SourceModule,'c:\programmi\borland\delphi7\source\vcl\StdCtrls.pas',0,1,3981,16,4002,0,0
-File_4=SourceModule,'c:\programmi\borland\delphi7\source\rtl\common\classes.pas',0,1,480,1,496,0,0
-File_5=SourceModule,'Y:\Developer\Repos\IEBrowser\sources\WinUtils.pas',0,1,234,1,250,0,0
-File_6=SourceModule,'Y:\Developer\Repos\IEBrowser\sources\FUAbout.dfm',0,1,1,1,1,0,0
-File_7=SourceModule,'c:\programmi\borland\delphi7\source\vcl\Forms.pas',0,1,4611,29,4617,0,0
-File_8=SourceModule,'c:\programmi\borland\delphi7\source\rtl\Win\SHFolder.pas',0,1,61,22,35,0,0
-File_9=SourceModule,'c:\programmi\borland\delphi7\source\rtl\Win\ShlObj.pas',0,1,3537,32,3553,0,0
+File_0=SourceModule,'H:\Developer\Me\IEBrowser\sources\FUAbout.pas',0,1,63,1,63,1,0
+File_1=SourceModule,'c:\programmi\borland\delphi7\source\rtl\Sys\sysutils.pas',0,1,4983,1,5001,0,0
+File_2=SourceModule,'c:\programmi\borland\delphi7\source\Internet\SHDocVw.pas',0,1,1058,30,1095,0,0
+File_3=SourceModule,'c:\programmi\borland\delphi7\source\vcl\OleCtrls.pas',0,1,145,1,110,0,0
+File_4=SourceModule,'c:\programmi\borland\delphi7\source\vcl\StdCtrls.pas',0,1,3981,16,4002,0,0
+File_5=SourceModule,'c:\programmi\borland\delphi7\source\rtl\common\classes.pas',0,1,480,1,496,0,0
+File_6=SourceModule,'Y:\Developer\Repos\IEBrowser\sources\WinUtils.pas',0,1,234,1,250,0,0
+File_7=SourceModule,'Y:\Developer\Repos\IEBrowser\sources\FUAbout.dfm',0,1,1,1,1,0,0
+File_8=SourceModule,'c:\programmi\borland\delphi7\source\vcl\Forms.pas',0,1,4611,29,4617,0,0
+File_9=SourceModule,'c:\programmi\borland\delphi7\source\rtl\Win\SHFolder.pas',0,1,61,22,35,0,0
 
 [Modules]
 Module0=H:\Developer\Me\IEBrowser\sources\FUMain.pas

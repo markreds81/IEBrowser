@@ -183,11 +183,11 @@ object FAbout: TFAbout
   object Label2: TLabel
     Left = 8
     Top = 48
-    Width = 353
+    Width = 350
     Height = 13
     Caption = 
-      'Copyright (C) 2020, 2021 Marco Rossi (aka Mark Reds). All rights' +
-      ' reserved.'
+      'Copyright (C) 2020-2025 Marco Rossi (aka Mark Reds). All rights ' +
+      'reserved.'
   end
   object Label3: TLabel
     Left = 8

@@ -115,7 +115,7 @@ AutoIncBuild=1
 MajorVer=1
 MinorVer=1
 Release=1
-Build=6
+Build=7
 Debug=0
 PreRelease=0
 Special=0
@@ -126,7 +126,7 @@ CodePage=1252
 [Version Info Keys]
 CompanyName=Marco Rossi
 FileDescription=IEBrowser
-FileVersion=1.1.1.6
+FileVersion=1.1.1.7
 InternalName=IEBrowser
 LegalCopyright=(C) Mark Reds
 LegalTrademarks=
